@@ -705,7 +705,10 @@ def line_format(line):
 
     def process_images(match):
         # only import this library if absolutely necessary
-        from term_image.image import from_file, from_url
+        try:
+            from term_image.image import from_file, from_url
+        except:
+            return
 
         url = match.group(2)
         try:
