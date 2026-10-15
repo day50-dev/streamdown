@@ -1,7 +1,7 @@
 <p align="center">
 <img src=https://github.com/user-attachments/assets/0468eac0-2a00-4e98-82ca-09e6ac679357/>
 <br/>
-<a href=https://pypi.org/project/streamdown><img src=https://badge.fury.io/py/streamdown.svg/></a>
+<a href=https://pypi.org/project/streamdown><img src=https://badge.fury.io/py/streamdown.svg/></a> <a href=https://pepy.tech/projects/streamdown><img src=https://static.pepy.tech/badge/streamdown/week>
 <br/><strong>Terminal streaming markdown that rocks</strong>
 
 </p>
