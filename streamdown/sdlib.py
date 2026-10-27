@@ -983,7 +983,7 @@ def parse(stream):
                 state.where_from = "code pad"
                 if Style.PrettyPad or Style.PrettyBroken:
                     if not Style.PrettyPad:
-                        yield ""
+                        yield state.space_left()
 
                     yield Style.Codepad[0]
                 else:
@@ -1021,7 +1021,7 @@ def parse(stream):
                     if Style.PrettyPad or Style.PrettyBroken:
                         yield Style.Codepad[1] 
                         if not Style.PrettyPad:
-                            yield ""
+                            yield state.space_left()
 
                     else:
                         yield RESET
