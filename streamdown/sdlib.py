@@ -96,7 +96,7 @@ KEYCODE_RE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
 
 visible = lambda x: re.sub(ANSIESCAPE, "", x)
 # many characters have different widths
-visible_length = lambda x: sum(wcwidth(c) for c in visible(x))
+visible_length = lambda x: sum(max(wcwidth(c), 0) for c in visible(x))
 extract_ansi_codes = lambda text: re.findall(ESCAPE, text)
 strip_ansi = lambda line: re.sub(ANSIESCAPE, '', line)
 scir = lambda line: strip_ansi(line) if state.block_depth > 0 else line
